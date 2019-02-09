@@ -45,14 +45,20 @@ Node * mergeLists(Node * pL1, Node * pL2)
 		return pL1;
 	}
 
+	if (pL1->num<pL2->num)//set pHead if NULL
+	{
+		pHead = pL1;
+	}
+	else//set pHead if NULL
+	{
+		pHead = pL2;
+	}
+
+
 	while (pCur1 && pCur2)//loop until end of either list is reached
 	{
 		if (pCur1->num <= pCur2->num)//value on pCur1 comes next
 		{
-			if (!pHead)//set pHead if NULL
-			{
-				pHead = pL1;
-			}
 			while (pCur1 && pCur1->num <= pCur2->num)
 			{
 				pPrev1 = pCur1;
@@ -62,10 +68,6 @@ Node * mergeLists(Node * pL1, Node * pL2)
 		}
 		else//value on pCur2 comes next
 		{
-			if (!pHead)//set pHead if NULL
-			{
-				pHead = pL2;
-			}
 			while (pCur2 && pCur2->num <= pCur1->num)
 			{
 				pPrev2 = pCur2;
