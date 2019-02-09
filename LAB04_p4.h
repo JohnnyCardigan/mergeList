@@ -1,4 +1,5 @@
 #ifndef LAB04_PH_H
+#define LAB04_PH_H
 
 
 #include <stdlib.h>
@@ -21,7 +22,6 @@ Node * mergeLists(Node * pL1, Node * pL2);
 
 
 
-#define LAB04_PH_H
 
 
 #endif // !LAB04_PH_H
